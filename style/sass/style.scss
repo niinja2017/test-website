@@ -1,0 +1,560 @@
+@import "color";
+
+@font-face {
+    font-family: "Yekan";
+    src: url(../font/Yekan.ttf) format(truetype);
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Roya";
+    src: url(../font/B\ Roya_0.ttf) format(truetype);
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Roya";
+    src: url(../font/B\ Roya\ Bold_0.ttf) format(truetype);
+    font-weight: bold;
+    font-style: normal;
+}
+body{
+    font-family: "Yekan";
+    background-color: $white-b;
+}
+input,select,textarea{
+    font-family: inherit;
+    font-size: inherit;
+}
+#topmenu{
+    background-color: $black-a;
+    position: fixed;
+    width: 100%;
+    height: 54px;
+    z-index: 1;
+    font-family: "Roya";
+}
+#topmenu ul{
+    position: absolute;
+    width: 100%;
+    top: 100%;
+    background-color: $black-a;
+    border-top: 1px solid $white-a;
+    font-size: 1.2rem;
+    display: none;
+    line-height: 250%;
+}
+#topmenu a{
+    color: $white-a;
+    display: block;
+    padding-right: 1.9rem;
+    border-bottom: 1px solid $white-c;
+    transition: 0.3s;
+}
+#topmenu a:hover{
+    background-color: $blue-c;
+    color: $white-a;
+}
+#button1{
+    position: fixed;
+    left: 1.2rem;
+    top: 0.7rem;
+    border: 1px solid $white-a;
+    border-radius: 5px;
+    z-index: 2;
+    cursor: pointer;
+}
+#button2{
+    position: fixed;
+    right: 1.2rem;
+    top: 0.7rem;
+    border: 1px solid $white-a;
+    border-radius: 5px;
+    z-index: 2;
+    cursor: pointer;
+}
+#header{
+    font-family: "Roya";
+    padding-top: 54px;
+    background: linear-gradient(to right,#00c6ff,#0072ff);
+}
+#logo{
+    display: none;
+}
+#search{
+    text-align: center;
+    color: $white-a;
+
+}
+#search h1{
+    margin-top: 0.95rem;
+    font-size: 2.4rem;
+}
+#search input[type="search"]{
+    max-width: 350px;
+    outline: none;
+    box-shadow: 0 0 5px $black-a;
+    width: 100%;
+    height: 45px;
+    border-radius: 5px;
+    border: none;
+    padding: 0.7rem;
+    font-size: 1.1rem;
+}
+#search input[type="submit"]{
+    width: 80px;
+    border: none;
+    background-color: $red-a;
+    color: $white-b;
+    box-shadow: 0 0 5px $black-a;
+    height: 45px;
+    margin: 10px;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    cursor: pointer;
+
+}
+#search input[type="submit"]:hover{
+    filter: brightness(85%);
+    transition: 0.5s;
+}
+
+#cats{
+    position: fixed;
+    top: 54px;
+    bottom: 0;
+    width: 300px;
+    right: -300px;
+    background-color: $white-a;
+    line-height: 270%;
+    transition: 0.3s;
+    box-shadow: 0 0 3px $black-a;
+    z-index: 1;
+    overflow: auto;
+}
+#cats a{
+    display: block;
+    color: $black-d;
+    padding: 0 .95rem;
+    border-bottom: 1px solid $white-d;
+}
+#cats a:hover{
+    background-color: $white-d;
+}
+#cats .submenu a{
+    padding-right: 1.9rem;
+    font-size: 0.9rem;
+}
+#cats .plus{
+    float: left;
+    font-size: 1.2em;
+    padding: 0 .95rem;
+}
+#cats .submenu{
+    display: none;
+    background-color: $white-f;
+}
+#content{
+    margin-top: 0.95rem;
+}
+#content .group{
+    background-color: $white-a;
+    box-shadow: 0 1px 2px $white-g;
+    margin-bottom: 1.9rem;
+}
+#content .group h2{
+    background-color: $white-e;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: normal;
+    border-bottom: 1px solid $white-b;
+    line-height: 240%;
+}
+.flex-box{
+    display: flex;
+    flex-wrap: wrap;
+}
+#content article{
+    margin: 0.95rem auto;
+    text-align: center;
+    max-width: 340px;
+    box-shadow: 0 0 0 1px $white-i;
+}
+#content article:hover{
+    box-shadow: 0 3px 10px 2px $white-i;
+}
+#content .image{
+    overflow: hidden;
+    position: relative;
+    border-bottom: 1px solid $white-i;
+}
+#content .imagelabel{
+    background-color: $red-a;
+    color: $white-a;
+    width: 150px;
+    font-size: 1.1rem;
+    opacity: 0.8;
+    position: absolute;
+    top: 15px;
+    left: -45px;
+    transform: rotate(-45deg);
+}
+#content .image img{
+    width: 100%;
+    display: block;
+    transition: 0.4s;
+}
+#content article:hover .image img{
+    transform: scale(1.1);
+}
+#content article h3{
+    color: $black-a;
+    font-weight: normal;
+    text-align: justify;
+    margin: 0.7rem 0.6rem 0 0.6rem ;
+    font-size: 1rem;
+    height: 70px;
+    overflow: hidden;
+}
+#content .rate{
+    margin: 0.8rem;
+    text-align: right;
+    color: $black-a;
+    font-size: 0.9rem;
+}
+#content .rate span:first-child{
+    background: $blue-b;
+    padding: 3px 4px 1px 4px;
+    border-radius: 3px;
+    margin-left: 0.5rem;
+    color: $white-a;
+}
+#content .star{
+    height: 20px;
+    width: 20px;
+    vertical-align: -4px;
+}
+#content .price{
+    font-size: 1.2rem;
+    color: $red-b;
+    margin: 0.25rem;
+}
+#content .buy{
+    display: block;
+    background-color: $blue-c;
+    color: $white-a;
+    font-size: 1.2rem;
+    line-height: 200%;
+    transition: 1s;
+}
+#content .buy:hover{
+    background-color: $blue-d;
+}
+#sidebar{
+    margin-top: 0.95rem;
+}
+#sidebar .group{
+    background-color: $white-a;
+    box-shadow: 0 1px 2px $white-i;
+    margin-bottom: 1.9rem;
+}
+#sidebar .group h2{
+    // background-color: $white-b ;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: normal;
+    border-bottom: 1px solid $white-k;
+    line-height: 240%;
+}
+#sidebar article{
+     margin: 0.95rem auto;
+     text-align: center;
+     max-width: 340px;
+     box-shadow: 0 0 0 1px #ddd;
+     position: relative;
+     overflow: hidden;
+}
+#sidebar article:hover{
+    box-shadow: 0 3px 10px 2px $white-i;
+}
+#sidebar .imagelabel {
+    background-color: $red-a;
+    color: $white-a;
+    width: 150px;
+    font-size: 1.1rem;
+    opacity: 0.8;
+    position: absolute;
+    top: 25px;
+    left: -35px;
+    transform: rotate(-45deg);
+}
+#sidebar .discount{
+    background-color: $red-a;
+    border-radius: 30px;
+    color: $white-a;
+    position: absolute;
+    opacity: 0.8;
+    width: 50px;
+    height: 38px;
+    padding-top: 0.8rem;
+    font-size: 1.1rem;
+    top: 15px;
+    right: 15px;
+}
+#sidebar article img{
+    width: 100%;
+    display: block;
+}
+#sidebar article .popup{
+    color: $white-a;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 110px;
+}
+#sidebar article .comment{
+    padding: 5px;
+    height: 65px;
+    font-size: 1rem;
+    overflow: hidden;
+    text-align: justify;
+}
+#sidebar article .price{
+    color: $yellow-a;
+    font-size: 1.3rem;
+}
+#contact{
+    background-color: $black-e;
+    color: $white-a;
+}
+#contact ul{
+    font-size: 0.9rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-around;
+}
+#contact li{
+    padding: 0.7rem 1.9rem;
+}
+#contact .mail, #contact .phone{
+    direction: ltr;
+}
+#contact .mail img, #contact .phone img{
+    width: 24px;
+    height: 24px;
+    vertical-align: bottom;
+}
+#details{
+    background-color: $black-b;
+    border-top: 3px solid $red-c;
+    padding: 15px 0 30px 0;
+}
+#details h3{
+    color: $white-a;
+    margin-top: 1.45rem;
+    font-size: 1.2rem;
+    text-align: center;
+    font-family: "Roya";
+}
+#details .about{
+    text-align: right;
+    margin-bottom: 0.7rem;
+    border-bottom: 1px solid $black-f;
+}
+#details p{
+    color: $white-h;
+    text-align: justify;
+    font-size: 0.9rem;
+}
+#details li{
+    text-align: center;
+}
+#details a{
+    color: $white-h;
+    font-size: 0.9rem;
+}
+#details a:hover{
+    color: $blue-e;
+}
+#copyright{
+    background-color: $black-g;
+}
+#copyright p{
+    color: $white-g;
+    font-size: 0.8rem;
+    text-align: center;
+    margin: 0.95rem 0;
+}
+#copyright strong{
+    color: $white-a;
+}
+#copyright li img{
+    width: 32px;
+    height: 32px;
+    display: block;
+    border-radius: 100%;
+}
+#copyright li{
+    display: inline-block;
+    margin: 0 5px;
+}
+#copyright ul{
+    text-align: center;
+    padding-top: 0.7rem;
+
+}
+#copyright li img:hover{
+    filter: brightness(60%);
+}
+
+@keyframes  animation-1{
+    0%{
+        transform: translateX(350px);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+@keyframes animation-2{
+    0%{
+        transform: translateX(-600px);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+
+
+@media screen and (min-width: 720px) {
+    #logo{
+        display: block;
+        text-align: center;
+        padding-top: 0.7rem;
+    }
+    #copyright p{
+        font-size: 0.9rem;
+    }
+}
+
+
+@media screen and (min-width: 960px) {
+    #button1,#button2{
+        display: none;
+    }
+    #topmenu{
+        border-bottom: 4px solid $red-a;
+        height: 50px;
+        position: static;
+    }
+    #topmenu ul{
+        display: flex;
+        position: static;
+        border: none;
+    }
+    #topmenu a{
+        padding: 0 1.9rem;
+        border: none;
+        background-color: $black-c;
+        margin:0 0.1rem;
+    }
+    #topmenu li:nth-child(4){
+        margin-right: auto;
+    }
+    #header{
+        padding-top: 0;
+    }
+    #cats{
+        position: static;
+        animation: animation-2 1s;
+        width: 100%;
+        box-shadow: none;
+        border-bottom: 1px solid $white-b;
+        font-size: .95rem;
+        background-color: $white-e;
+    }
+    #cats .plus{
+        display: none;
+    }
+    #cats > ul{
+        max-width: 1536px;
+        margin: 0 auto;
+    }
+    #cats .item{
+        float: right;
+    }
+    #cats a{
+        border: none;
+        padding: 0 1.2rem;
+        transition: 0.5s;
+    }
+    #cats a:hover{
+        background-color: $blue-c ;
+        color: $white-a;
+    }
+    #cats li:hover{
+        background-color: $white-a;
+    }
+    #cats li:hover > ul{
+        display: block !important;
+    }
+    #cats .submenu{
+        width: 200px;
+        position: absolute;
+        border: 1px solid $white-i;
+        border-top: none;
+        background-color: $blue-d;
+        z-index: 1;
+        line-height: 240%;
+    }
+    #cats .subitem{
+            position: relative;
+            border-top: 1px solid $white-i;
+    }
+    #cats .subitem a{
+        padding: 0 0.95rem !important;
+        color: $white-e;
+    }
+    #content article h3{
+        font-size: 0.9rem;
+    }
+    #content .price{
+        font-size: 1.2rem;
+        margin: 0.25rem;
+    }
+    #sidebar article .comment{
+        font-size: 0.95rem;
+    }
+    #sidebar article .price{
+        font-size: 1.2rem;
+    }
+    #sidebar article .popup{
+        bottom: -110px;
+        transition: 0.4s;
+    }
+    #sidebar article:hover .popup{
+        bottom: 0;
+    }
+
+}
+
+@media screen and (min-width:1140px) {
+
+    #content article{
+        flex-basis: 24%;
+    }
+
+    main > div{
+        display: flex;
+    }
+    main > div > div{
+        order: 2;
+    }
+    #logo{
+        animation: animation-1 4s;
+    }
+    #search{
+        animation: animation-2 4s;
+    }
+}

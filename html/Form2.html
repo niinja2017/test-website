@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>فرم ثبت نام 2</title>
+    <style>
+        html{
+            font-size: 100%;
+        }
+        body{
+            margin: 0;
+            padding: 0;
+            text-decoration: none;
+            list-style: none;
+            outline: none;
+            background: url(../image/guillermo-ferla-Oze6U2m1oYU-unsplash.jpg) center/cover;
+            overflow: hidden;
+            
+        }
+        #Form{
+            margin: 0 auto;
+            width: 50%;
+            padding: 0 0 3rem;
+            background-color: rgba(255, 240, 240, 0.3);
+            backdrop-filter: blur(9px);
+            border-radius: 50PX;
+        }
+        form{
+            line-height: 3.5rem;
+        }
+        .title{
+            color: rgb(35, 33, 33);
+            padding: 4rem 10rem 0;
+            text-shadow: 1px 1px 1px white;
+            animation: animate 1s;
+            
+        }
+        .animate{
+            animation: animate 1s;
+        }
+        .animate-2{
+            animation: animate-2 1s;
+        }
+        label{
+            color: rgb(0, 0, 0);
+            width:15%;
+            padding: 3rem 10rem 1rem 0;
+            display: inline-block;
+        }
+        input{
+            padding: 0.5rem 0.5rem;
+            width: 30%;
+            border: none;
+            border-radius: 5px;
+            background-color: rgb(57, 53, 53);
+            outline: none;
+            color: white;
+            transition: 2s;
+        }
+        input:hover{
+            box-shadow: 0 0 25px red;
+        }
+        input::placeholder{
+            color: white;
+            text-shadow: 1px 1px 1px black;
+            padding: 0.5rem;
+        }
+        .border{
+            border: 5px solid red;
+            margin: 0 auto;
+            position: absolute;
+            padding: 2rem;
+            width: 80%;
+            height: 81%;
+            left: 5%;
+            border-radius: 15px;
+            top: 4%;
+            z-index: -1;
+            opacity: 0.8;
+            animation: animate-3 5s infinite;
+        }
+        button{
+            display: block;
+            margin: 0.5rem auto;  
+            padding: 0.5rem;    
+            width: 10%;
+            border: none;
+            background: linear-gradient(to right,#F00000,#DC281E);
+            outline: none;
+            animation: animate-3 2s infinite;
+            border-radius: 15px;
+            color: white;
+            cursor: pointer;
+            transition: 0.5s;
+        }
+        button:hover{
+            filter: brightness(120%);
+        }
+        @keyframes animate{
+            0%{
+                transform: translatex(300px);
+            }
+            100%{
+                transform: translateX(0px);
+            }
+        }
+        @keyframes animate-2{
+            0%{
+                transform: translatex(-300px);
+            }
+            100%{
+                transform: translateX(0px);
+            }  
+        }
+        @keyframes  animate-3{
+            0%{
+                box-shadow: 0 0 0 red;
+            }
+            50% ,75%{
+                box-shadow: 0 0 25px red;
+            }
+            100%{
+                box-shadow: 0 0 30px red;
+            }
+            100%,0%{
+                box-shadow: 0 0 0 red;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="Form">
+        <h1 class="title">به سایت ما خوش آمدید</h1>
+        <div class="border"></div>
+        <form action="#">
+            <label class="animate-2" for="" >نام و نام خوانوادگی :</label>
+            <input class="animate-2" type="text" placeholder="نام و نام خوانوادگی خود را وارد کنید">
+            <br>
+            <label class="animate" for="">ایمیل :</label>
+            <input class="animate" type="email" placeholder="ایمیل خود را وارد کنید">
+            <br>
+            <label class="animate-2" for="">رمز :</label>
+            <input class="animate-2" type="password" placeholder="رمز خود را وارد کنید" minlength="7">
+            <br>
+            <label class="animate" for="">تکرار رمز :</label>
+            <input class="animate" type="password" placeholder="رمز خود را تکرار کنید" minlength="7">
+            <br>
+            <button type="submit">ثبت نام</button>
+        </form>
+        
+        
+    </div>
+</body>
+</html>
